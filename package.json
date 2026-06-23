@@ -1,0 +1,15 @@
+{
+  "name": "ai-diviner",
+  "version": "1.0.0",
+  "description": "AI 塔罗牌占卜网站",
+  "main": "server/proxy.js",
+  "scripts": {
+    "start": "node server/proxy.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.2"
+  }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔮 AI 塔罗占卜 - 星语者</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 星空背景 -->
+  <div class="stars"></div>
+  <!-- 浮动作者名 -->
+  <div class="author-float">@缘来是潇潇</div>
+  <!-- 流星群：白、金、紫三色交相辉映 -->
+  <div class="shooting-star white"></div>
+  <div class="shooting-star golden"></div>
+  <div class="shooting-star purple"></div>
+  <div class="shooting-star white diagonal"></div>
+  <div class="shooting-star golden"></div>
+  <div class="shooting-star purple"></div>
+  <div class="shooting-star white"></div>
+  <div class="shooting-star golden diagonal"></div>
+  <div class="shooting-star purple"></div>
+  <div class="shooting-star white"></div>
+
+  <!-- 主容器 -->
+  <div class="container">
+    <!-- 头部 -->
+    <header>
+      <h1 class="title">
+        ✦ 星 语 者 ✦
+        <span class="sparkle-dot sparkle-1"></span>
+        <span class="sparkle-dot sparkle-2"></span>
+        <span class="sparkle-dot sparkle-3"></span>
+      </h1>
+      <p class="subtitle">AI 塔罗占卜</p>
+      <div class="divider"></div>
+    </header>
+
+    <!-- 输入区 -->
+    <div class="input-section">
+      <label for="questionInput">🙏 请说出你的困惑...</label>
+      <textarea 
+        id="questionInput" 
+        class="question-input" 
+        rows="3"
+        placeholder="试试输入：我最近事业运如何？"
+        maxlength="200"
+      ></textarea>
+      <button id="btnDivine" class="btn-divine">
+        <span class="btn-icon">🔮</span> 开始占卜
+      </button>
+    </div>
+
+    <!-- 错误提示 -->
+    <div id="errorMessage" class="error-message"></div>
+
+    <!-- 牌区 -->
+    <div class="cards-section">
+      <div id="cardsContainer" class="cards-container">
+        <!-- 塔罗牌由 JavaScript 动态生成 -->
+      </div>
+    </div>
+
+    <!-- 加载动画 -->
+    <div id="loadingSection" class="loading-section">
+      <div class="loading-spinner"></div>
+      <div class="loading-text">🔮 星语者正在解读牌阵...</div>
+    </div>
+
+    <!-- 解读区 -->
+    <div id="readingSection" class="reading-section">
+      <div class="reading-header">
+        <h2>🔮 星语者为你解读</h2>
+        <p id="questionReview" class="question-review"></p>
+      </div>
+      <div id="readingContent" class="reading-content"></div>
+      <button id="btnReset" class="btn-reset">⟳ 重新占卜</button>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+      <p>✦ 宇宙的能量与你同在 ✦</p>
+    </footer>
+  </div>
+
+  <!-- 脚本 -->
+  <script src="js/cards.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
